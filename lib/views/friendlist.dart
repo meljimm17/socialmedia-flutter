@@ -7,20 +7,29 @@ import 'package:socialmedia/model/userdata.dart';
 
   final Userdata userdata;
 
-  var followTxtStyle = const TextStyle(
+  static const TextStyle followTxtStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
   );
 
   Widget friend(Friend friend) => Card(
+    clipBehavior: Clip.antiAlias,
     child: Column(
       children: [
-        Expanded(child: Image.asset (
-          friend.img)),
-          Padding(padding: const EdgeInsets.all(8.0), 
-          child: Text(friend.name)),
-
-    ],)
+        SizedBox(
+          height: 120,
+          width: double.infinity,
+          child: Image.asset(
+            friend.img,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(friend.name),
+        ),
+      ],
+    ),
   );
 
   Widget friendListGrid() => GridView.builder(
@@ -28,7 +37,7 @@ import 'package:socialmedia/model/userdata.dart';
     physics: const BouncingScrollPhysics(),
     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3,
-      mainAxisExtent: 100,
+      mainAxisExtent: 170,
     ),
       itemCount: userdata.friendList.length,
       itemBuilder: (BuildContext ctx, index) {

@@ -58,8 +58,8 @@ class Userdata{
       userImg: 'assets/person5.jfif',
       userName: 'Noelle',
       time: '2 hrs ago',
-      postContent: 'Beach with Asta!',
-      posting: 'assets/beachMagma.jfif',
+      postContent: 'Beach with BakAsta!',
+      posting: 'assets/beachNoelle.jfif',
       numComments: "21",
       numShare: '5',
       isLiked: true, 
@@ -105,9 +105,9 @@ class Userdata{
                 commenterContent: "FIGHT FIGHT FIGHT!"),
   ];
 
-    Account myUserAccount = Account (name: "Asta",
-                                    email: "asta@gmail.com",
-                                    img: "assests/person2.jfif",
+    Account myUserAccount = Account (name: "Mel Jimm Joves",
+                                    email: "meljimm@gmail.com",
+                                    img: "assets/meljimm.jpg",
                                     numFollowers: "99",
                                     numPosts: "1",
                                     numFollowing: "10",

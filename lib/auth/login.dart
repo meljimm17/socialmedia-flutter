@@ -22,12 +22,14 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   @override
-  void dipose(){
+  void dispose() {
+    usernameController.dispose();
+    passwordController.dispose();
     super.dispose();
   }
 
-  void checkLogin(username, password){
-    if(username == null) {
+  void checkLogin(String username, String password){
+    if(username.isEmpty) {
       errormessage = "Please input username";
       isError = true;
     } else if (password == ""){
@@ -38,6 +40,7 @@ class _LoginFormState extends State<LoginForm> {
       isError = false;
     }
   }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
